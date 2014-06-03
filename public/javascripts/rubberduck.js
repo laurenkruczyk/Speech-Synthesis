@@ -10,16 +10,11 @@ $(document).ready(function() {
   $("#command_line").fadeIn(3000);
   $("form").submit(function() {
     var input = $("#command_line").val();
-    var list = $("ul li").toArray();
-    var elemlength = list.length;
-    var randomnum = Math.floor(Math.random()*elemlength);
-    var randomitem = list[randomnum];
     answer(input.toLowerCase());
+
     $("#console").scrollTop($("#console")[0].scrollHeight);
     $("#command_line").val("");
     });
-
-  // $(randomitem).css("display", "block");
 });
 
 function speak(message, voice) {
