@@ -44,3 +44,7 @@ function randomItem() {
 }
 
 var words = ['regex', 'ruby', 'rails', 'jq']
+
+//speak takes an options second argument
+//anytime you want it to speak call the 
+//speak function with the text and the voice number
