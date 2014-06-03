@@ -21,7 +21,7 @@ function speak(message, voice) {
   var voice = voice || 0;
   var msg = new SpeechSynthesisUtterance(message);
   var voices = speechSynthesis.getVoices();
-  msg.voice = voices[0];
+  msg.voice = voices[voice];
   speechSynthesis.speak(msg);
 }
 
@@ -35,7 +35,7 @@ function answer(input) {
     var response = $(randomItem());
   }
   response.clone().insertBefore("#placeholder").fadeIn(1000);
-  speak(response.text());
+  speak(response.text(), Math.floor(Math.random() * 10));
 }
 
 function randomItem() {
